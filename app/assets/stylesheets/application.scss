@@ -5,21 +5,6 @@ main {
 }
 
 #movie .movie-title {
-  @media screen and (min-width: 0px){
-    font-size: 40px;
-  }
-
-  @media screen and (min-width: 992px){
-    font-size: 20px;
-  }
+  font-size: 20px;
 }
 
-#movie .movie-contents {
-  @media screen and (min-width: 992px){
-    padding-bottom: 70px;
-  }
-
-  @media screen and (min-width: 0px){
-    padding-bottom: 70px;
-  }
-}
