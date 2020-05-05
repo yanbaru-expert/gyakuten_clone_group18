@@ -20,6 +20,7 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'devise-i18n'
 
+gem 'devise-bootstrap-views'
 gem 'activeadmin'
 
 group :development, :test do
