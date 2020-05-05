@@ -3,7 +3,7 @@
     <div class="container">
       <div class="rows">
         <section class="text-center">
-          <% @movies.each.with_index(1) do |movie,i| %>
+          <% @movies.each.with_index(@movies.offset_value + 1) do |movie,i| %>
             <div class="col-xs-12 my-5">
               <div class="movie-title">
                 Lv.<%= i %>：<%= movie.title %>
