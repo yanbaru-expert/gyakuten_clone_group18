@@ -22,6 +22,9 @@ gem 'devise-i18n'
 
 gem 'activeadmin'
 
+gem 'kaminari'
+
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
