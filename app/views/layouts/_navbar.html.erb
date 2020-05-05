@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="#">Gyakuten</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,18 +6,25 @@
 
 <div class="collapse navbar-collapse">
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <%= link_to "新規登録", new_user_registration_path %>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rails <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">動画教材</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">テキスト教材</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ライブコーディング</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">質問集</a>
+                </li>
+            </ul>
         </li>
-        <li class="nav-item">
-            <%= link_to "ログイン", new_user_session_path %>
-        </li>
-        <li class="nav-item">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Rails</a>
-        </li>
+    
         <li class="nav-item">
             <a class="nav-link" href="#">AWS講座</a>
         </li>
@@ -34,14 +40,24 @@
         <li class="nav-item">
             <a class="nav-link" href="#">動画編集講座</a>
         </li>
-        </li>
         <li class="nav-item">
             <a class="nav-link" href="#">ライディング講座</a>
-        </li>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">LINE@</a>
         </li>
+        <% if user_signed_in? %>
+            <li class="nav-item nav-link">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
+        <% else %>
+            <li class="nav-item nav-link">
+                <%= link_to "新規登録", new_user_registration_path %>
+            </li>
+            <li class="nav-item nav-link">
+                <%= link_to "ログイン", new_user_session_path %>
+            </li>
+        <% end %>
     </ul>
 </div>
 </nav>    
