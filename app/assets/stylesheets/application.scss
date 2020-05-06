@@ -10,10 +10,15 @@ main {
 
 @import "bootstrap/scss/bootstrap";
 
-.alert-notice {
-    @extend .alert-info;
+.alert-notice {  
+  @extend .alert-info;
   }
 
 .alert-alert {
   @extend .alert-danger;
+}
+
+#movie .paginate-container {
+  display: flex;
+  justify-content: center;
 }
