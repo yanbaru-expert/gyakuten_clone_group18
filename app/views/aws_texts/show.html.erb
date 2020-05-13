@@ -1,0 +1,6 @@
+<div class="container" >
+  <div class="aws_text">
+    <h3><%= @aws_text.title %></h3>
+  </div>
+        <%= markdown(@aws_text.content).html_safe %>
+</div>

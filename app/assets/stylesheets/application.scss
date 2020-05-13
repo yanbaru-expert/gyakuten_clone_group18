@@ -23,8 +23,6 @@ main {
   justify-content: center;
 }
 
-
-
 #questions a {
     text-decoration: none;
     display: block;
@@ -59,4 +57,11 @@ main {
 
 #questions .question {
     padding: 10px;
+}
+
+.container {
+    text-align: left;
+}
+.aws_text {
+    margin: 30px 0 20px 0;
 }

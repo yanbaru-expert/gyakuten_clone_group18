@@ -14,7 +14,7 @@
         <% @aws_texts.each.with_index(1) do |aws_text, i| %>
       <tr>
         <td><%= "#{i}" %></td>
-        <td><%= aws_text.title %></td>
+        <td><%= link_to aws_text.title, aws_text_path(aws_text) %></td>
       </tr>
      <% end %>
     </table>
