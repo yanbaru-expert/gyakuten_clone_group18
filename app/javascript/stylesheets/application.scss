@@ -1,2 +1,63 @@
 
 @import "~bootstrap/scss/bootstrap";
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#movie .movie-title {
+  font-size: 20px;
+}
+
+#movie .paginate-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+#questions a {
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    border: solid 2px #505050;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+#questions a .title {
+    font-size: 22px;
+    line-height: 2;
+}
+
+#questions a .info {
+    padding: 10px 10px 10px 20px;
+    color: #BBBBBB;
+}
+
+#questions a {
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    border: solid 2px #505050;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+#questions .question-container {
+    padding: 30px 0;
+}
+
+#questions .question {
+    padding: 10px;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}

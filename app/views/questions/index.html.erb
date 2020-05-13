@@ -1,3 +1,21 @@
+
+
+<h2>新規投稿</h2>
+<%= form_with model: @question, local: true do |f| %>
+  <div class="form-group">
+    <p>【質問】</p>
+    <p><%= f.text_field :title, class: "form-control" %></p>
+  </div>
+  <div class="form-group">
+    <p>【詳細】</p>
+    <p><%= f.text_area :detail, rows: 5,class: "form-control"%></p>
+  </div>
+  <div class="form-group">
+    <button type="f.submit" class="btn btn-primary btn-block">送信</button>
+  </div>
+<% end %>
+
+
 <div id="container">
   <div class="container">
   </div>
