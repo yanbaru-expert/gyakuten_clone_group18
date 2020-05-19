@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="#">Gyakuten</a>
+<%= link_to "Gyakuten", root_path, class: "navbar-brand" %>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -11,7 +11,7 @@
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rails <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">動画教材</a>
+                    <%= link_to "動画教材", root_path, class: "nav-link" %>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="aws_texts">テキスト教材</a>
