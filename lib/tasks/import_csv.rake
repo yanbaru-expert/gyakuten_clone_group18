@@ -36,4 +36,17 @@ namespace :import_csv do
       puts "インポートに失敗：UnknownAttributeError"
     end
   end
+
+  desc "live_codingsテーブルへCSVデータをインポートするタスク"
+  task live_codings: :environment do
+    list = Import.csv_data(path: "db/csv_data/live_coding_data.csv")
+    puts "インポート処理を開始"
+    begin
+      LiveCoding.create!(list)
+      puts "インポート完了!!"
+    rescue ActiveModel::UnknownAttributeError => invalid
+      puts "インポート処理に失敗: UnknownAttributeError"
+    end
+  end
+
 end
