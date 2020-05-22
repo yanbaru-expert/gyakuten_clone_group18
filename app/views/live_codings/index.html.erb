@@ -1,0 +1,8 @@
+<div class="text-center">
+  <% @live_codings.each do |live_coding| %>
+    <div class="py-5">
+      <p><%= live_coding.title %></p>
+      <iframe width="560" height="315" src="<%= live_coding.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" afullscreen></iframe>
+    </div>
+  <% end %>
+</div>
