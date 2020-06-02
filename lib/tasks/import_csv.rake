@@ -51,7 +51,7 @@ namespace :import_csv do
 
   desc "talkテーブルへCSVデータをインポートするタスク"
   task talk: :environment do
-    list = Inport.csv_data(path: "db/csv_data/talk_data.csv")
+    list = Import.csv_data(path: "db/csv_data/talk_data.csv")
     puts "インポート処理を開始"
     begin
       Talk.create!(list)
