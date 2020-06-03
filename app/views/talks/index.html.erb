@@ -1,0 +1,11 @@
+<div class="text-center">
+  <% @talks.each do |talk| %>
+    <div class="py-5">
+      <div class="talk-title">
+        <%= talk.title %>
+        <iframe width="560" height="315" src="<%= talk.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" afullscreen></iframe>
+      </div>
+    </div>
+  <% end %>
+  <%= paginate @talks %>
+</div>

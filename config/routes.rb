@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :create, :show]
   resources :aws_texts, only: [:index, :show]
   resources :live_codings, only: [:index]
+  resources :talks, only: [:index]
 
 end
