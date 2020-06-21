@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :aws_texts, only: [:index, :show]
   resources :live_codings, only: [:index]
   resources :talks, only: [:index]
+  resources :solutions
 
 end
