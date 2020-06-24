@@ -8,7 +8,14 @@
     <%= markdown(@question.detail).html_safe %>
   </div>
 </div>
+
+<hr>
+<% solutions.each do |solution| %>
+  <p>【回答】</p>
+  <%= solution.answer %>
+<% end %>
 <br>
+
 <h3>回答投稿</h3>
 <%= form_with model: [@question,@solution], local: true do |f| %>
   <div class="form-group">
