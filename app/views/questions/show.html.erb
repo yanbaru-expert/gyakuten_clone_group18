@@ -19,7 +19,7 @@
         <p>【回答】</p>
         <%= f.text_area :answer, rows: 5, class: "form-control"%>
       </div>
-      <%= f.submit "送信", class: "btn btn-primary btn-block" %>
+      <%= f.submit "送信", class: "btn btn-primary btn-block", data: {confirm: "投稿しますか？"} %>
     <% end %>
   </div>
 </div>
