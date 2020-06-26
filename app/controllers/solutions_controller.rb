@@ -4,8 +4,9 @@ class SolutionsController < ApplicationController
     @solution = @question.solutions.build(solution_params)
     @solution.question_id = @question.id
     if @solution.save
-      redirect_to question_path, notice: "回答を投稿しました。"
+      redirect_to @question, notice: "回答を投稿しました。"
     else
+      @solutions = Solution.all
       flash.now[:alert] = "回答の投稿に失敗しました"
       render template: "questions/show"
     end
