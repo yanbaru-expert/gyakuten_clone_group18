@@ -24,7 +24,7 @@ gem 'devise-bootstrap-views'
 gem 'activeadmin'
 
 gem 'kaminari'
-gem 'redcarpet', '~> 2.3.0'
+gem 'redcarpet'
 gem 'coderay'
 
 group :development, :test do
