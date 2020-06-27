@@ -6,8 +6,8 @@ class SolutionsController < ApplicationController
     if @solution.save
       redirect_to @question, notice: "回答を投稿しました。"
     else
-      @solutions = Solution.all
-      flash.now[:alert] = "回答の投稿に失敗しました"
+      @solutions = @question.solutions
+      flash.now[:alert] = "1つのエラーがあります。"
       render template: "questions/show"
     end
   end
