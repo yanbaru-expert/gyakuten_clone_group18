@@ -1,25 +1,32 @@
-<div class="container" >
-  <div class="question">
-    <h3>【質問】</h3>
-    <%= @question.title %>
-    <hr>
-    <h3>【詳細】</h3>
-    <%= markdown(@question.detail).html_safe %>
-  
-    <hr>
-    <h3>【回答】</h3>
-    <% @solutions.each do |solution| %>
-      <%= solution.answer %>
+<div class="container">
+  <div class="error_explanation">
+    <% if @solution.errors.any? %>
+      <ul>
+        <li>【回答】は空欄にできません</li>
+      </ul>
     <% end %>
-    <br>
-    <br>
-    <h3>回答投稿</h3>
-    <%= form_with model: [@question,@solution], local: true do |f| %>
+  </div>
+    <div class="question">
+      <h3>【質問】</h3>
+        <%= @question.title %>
+      <hr>
+      <h3>【詳細】</h3>
+        <%= markdown(@question.detail).html_safe %>
+  
+      <hr>
+      <h3>【回答】</h3>
+        <% @solutions.each do |solution| %>
+          <%= solution.answer %>
+        <% end %>
+      <br>
+      <br>
+      <h3>回答投稿</h3>
+        <%= form_with model: [@question,@solution], local: true do |f| %>
       <div class="form-group">
         <p>【回答】</p>
         <%= f.text_area :answer, rows: 5, class: "form-control"%>
       </div>
-      <%= f.submit "送信", class: "btn btn-primary btn-block", data: {confirm: "投稿しますか？"} %>
-    <% end %>
+        <%= f.submit "送信", class: "btn btn-primary btn-block", data: {confirm: "投稿しますか？"} %>
+        <% end %>
   </div>
 </div>
