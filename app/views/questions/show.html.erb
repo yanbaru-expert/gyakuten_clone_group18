@@ -16,10 +16,8 @@
       <hr>
       <h3>【回答】</h3>
         <% @solutions.each do |solution| %>
-          <%= solution.answer %>
+          <%= markdown(solution.answer).html_safe %>
         <% end %>
-      <br>
-      <br>
       <h3>回答投稿</h3>
         <%= form_with model: [@question,@solution], local: true do |f| %>
       <div class="form-group">
