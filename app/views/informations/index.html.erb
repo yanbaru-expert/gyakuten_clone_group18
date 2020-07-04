@@ -1,17 +1,18 @@
 <div class="container-fluid">
   <div class="row pt-5">
     <% @informations.each do |information| %>
-      <div class="col-sm-4">
-        <div class="card">
-          
-            <iframe class="card-img-top" width="100%" height="180" src="<%= information.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-dark mb-3">
+          <div class="card-header p-0">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="card-img-top" width="560" height="315" src="<%= information.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+            </div>
+          </div>
             <div class="card-body">
               <h5 class="card-title"><%= information.title %></h5>
             </div>
-          
         </div>
       </div>
-    
     <% end %>
   </div>
 </div>
