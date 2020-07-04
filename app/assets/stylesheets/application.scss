@@ -101,3 +101,9 @@ main {
     width: 90%;
     overflow: hidden;
 }
+
+.card-body {
+  height: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
