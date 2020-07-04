@@ -1,7 +1,5 @@
 main {
   max-width: 700px;
-  margin: 0 auto;
-  padding: 1rem;
 }
 
 #movie .movie-title {
@@ -83,11 +81,23 @@ main {
   font-size: 20px;
 }
 
-.embed-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+#container {
+    width: 990px;
+}
+
+.container-fluid {
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    display: block;
+    width: 90%;
+    overflow: hidden;
 }
