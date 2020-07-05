@@ -73,4 +73,16 @@ namespace :import_csv do
     end
   end
 
+  desc "movie_editテーブルへCSVデータをインポートするタスク"
+  task movie_edit: :environment do
+    list = Import.csv_data(path: "db/csv_data/movie_edit_data.csv")
+    puts "インポート処理を開始"
+    begin
+      MovieEdit.create!(list)
+      puts "インポート完了!!"
+    rescue ActiveModel::UnknownAttributeError => invalid
+      puts "インポートに失敗:UnknownAttributeError"
+    end
+  end
+
 end
