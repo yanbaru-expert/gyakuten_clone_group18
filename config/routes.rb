@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :live_codings, only: [:index]
   resources :talks, only: [:index]
   resources :informations, only: [:index]
+  resources :movie_edits, only: [:index]
 
 end
