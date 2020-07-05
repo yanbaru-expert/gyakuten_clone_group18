@@ -78,7 +78,7 @@ namespace :import_csv do
     list = Import.csv_data(path: "db/csv_data/movie_edit_data.csv")
     puts "インポート処理を開始"
     begin
-      Movie_edit.create!(list)
+      MovieEdit.create!(list)
       puts "インポート完了!!"
     rescue ActiveModel::UnknownAttributeError => invalid
       puts "インポートに失敗:UnknownAttributeError"
