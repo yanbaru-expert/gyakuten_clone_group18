@@ -1,0 +1,2 @@
+class MovieEdit < ApplicationRecord
+end
