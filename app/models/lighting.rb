@@ -1,2 +1,0 @@
-class Lighting < ApplicationRecord
-end

@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   resources :talks, only: [:index]
   resources :informations, only: [:index]
   resources :movie_edits, only: [:index]
-  resources :lightings, only: [:index]
+  resources :writings, only: [:index]
 
 end
