@@ -1,2 +1,21 @@
-<h1>Lightings#index</h1>
-<p>Find me in app/views/lightings/index.html.erb</p>
+<div id="container">
+  <div class="container-fluid">
+    <div class="row pt-5">
+      <% @lightings.each do |lighting| %>
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-dark mb-3">
+            <div class="card-header p-0">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="card-img-top" width="560" height="315" src="<%= lighting.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+              </div>
+            </div>
+              <div class="card-body">
+              <%# <p><button type="button" class="btn btn-secondary btn-block">視聴済みにする</button></p> %>
+                <h3 class="card-text"><%= lighting.title %></h3>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
