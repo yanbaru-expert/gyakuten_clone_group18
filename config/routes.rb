@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :informations, only: [:index]
   resources :movie_edits, only: [:index]
   resources :writings, only: [:index]
+  resources :monetizes, only: [:index]
 
 end
