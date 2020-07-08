@@ -1,2 +1,6 @@
-<h1>Lines#show</h1>
-<p>Find me in app/views/lines/show.html.erb</p>
+<div class="container-block" >
+  <div id="line-content">
+    <% @line.content %>
+      <%= markdown(@line.content).html_safe %>
+  </div>
+</div>
