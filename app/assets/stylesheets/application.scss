@@ -127,3 +127,12 @@ body {
   text-align: left;
   line-height: 3em;
 }
+
+// navbar
+.navbar {
+  font-size: 0.8rem;
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
