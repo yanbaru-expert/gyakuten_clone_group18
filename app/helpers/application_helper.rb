@@ -45,4 +45,12 @@ module ApplicationHelper
         markdown = Redcarpet::Markdown.new(html_render, options)
         markdown.render(text)
     end
+
+    def lines_navbar
+        if controller.controller_name == "lines"
+            "bg-success"
+        else
+            "bg-primary"
+        end
+    end
 end
