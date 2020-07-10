@@ -42,8 +42,10 @@ body {
     padding: 30px 0;
 }
 
-#questions .question {
-    padding: 10px;
+.question {
+  text-align: left;
+  margin: 0 auto;
+  width: 710px;
 }
 
 .error_explanation {

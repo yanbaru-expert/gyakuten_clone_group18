@@ -7,15 +7,15 @@
     <% end %>
   </div>
     <div class="question">
-      <h3>【質問】</h3>
+      <h5>【質問】</h5>
         <%= @question.title %>
-      <hr>
-      <h3>【詳細】</h3>
+      <hr><br>
+      <h5>【詳細】</h5>
         <%= markdown(@question.detail).html_safe %>
   
-      <hr>
-      <h3>【回答】</h3>
+      <hr><br>
         <% @solutions.each do |solution| %>
+          <h5>【回答】</h5>
           <%= markdown(solution.answer).html_safe %>
         <% end %>
       <h3>回答投稿</h3>
@@ -26,5 +26,5 @@
       </div>
         <%= f.submit "送信", class: "btn btn-primary btn-block", data: {confirm: "投稿しますか？"} %>
         <% end %>
-  </div>
+    </div>
 </div>
