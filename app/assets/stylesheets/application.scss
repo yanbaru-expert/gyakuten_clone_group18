@@ -63,7 +63,14 @@ body {
 }
 
 .aws_text {
-    margin: 30px 0 20px 0;
+  width: 710px;
+  margin: 0 auto;
+}
+
+#aws_content {
+  text-align: left;
+  margin: 0 auto;
+  width: 710px;
 }
 
 .pagination {
