@@ -2,10 +2,6 @@ body {
   padding-top: 60px;
 }
 
-#movie .movie-title {
-  font-size: 20px;
-}
-
 @import "bootstrap/scss/bootstrap";
 
 .alert-notice {  
@@ -14,11 +10,6 @@ body {
 
 .alert-alert {
   @extend .alert-danger;
-}
-
-#movie .paginate-container {
-  display: flex;
-  justify-content: center;
 }
 
 #questions a {
