@@ -85,4 +85,40 @@ namespace :import_csv do
     end
   end
 
+  desc "writingテーブルへCSVデータをインポートするタスク"
+  task writing: :environment do
+    list = Import.csv_data(path: "db/csv_data/writing_data.csv")
+    puts "インポート処理を開始"
+    begin
+      Writing.create!(list)
+      puts "インポート完了!!"
+    rescue ActiveModel::UnknownAttributeError => invalid
+      puts "インポートに失敗:UnknownAttributeError"
+    end
+  end
+
+  desc "monetizeテーブルへCSVデータをインポートするタスク"
+  task monetize: :environment do
+    list = Import.csv_data(path: "db/csv_data/monetize_data.csv")
+    puts "インポート処理を開始"
+    begin
+      Monetize.create!(list)
+      puts "インポート完了!!"
+    rescue ActiveModel::UnknownAttributeError => invalid
+      puts "インポートに失敗:UnknownAttributeError"
+    end
+  end
+
+  desc "lineテーブルへCSVデータをインポートするタスク"
+  task line: :environment do
+    list = Import.csv_data(path: "db/csv_data/line_data.csv")
+    puts "インポート処理を開始"
+    begin
+      Line.create!(list)
+      puts "インポート完了!!"
+    rescue ActiveModel::UnknownAttributeError => invalid
+      puts "インポートに失敗:UnknownAttributeError"
+    end
+  end
+
 end

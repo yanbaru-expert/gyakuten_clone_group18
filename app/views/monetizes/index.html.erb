@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row pt-5">
-    <% @informations.each do |information| %>
+    <% @monetizes.each do |monetize| %>
       <div class="col-md-6 col-lg-4">
         <div class="card border-dark mb-3">
           <div class="card-header p-0">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="card-img-top" width="560" height="315" src="<%= information.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+              <iframe class="card-img-top" width="560" height="315" src="<%= monetize.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
             </div>
           </div>
             <div class="card-body">
             <%# <p><button type="button" class="btn btn-secondary btn-block">視聴済みにする</button></p> %>
-              <h3 class="card-text"><%= information.title %></h3>
+              <h3 class="card-text"><%= monetize.title %></h3>
             </div>
         </div>
       </div>

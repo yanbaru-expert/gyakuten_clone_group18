@@ -29,7 +29,7 @@ module ApplicationHelper
         html_render = HTMLwithCoderay.new(
           filter_html: true,
           hard_wrap: true,
-          link_attributes: { rel: 'nofollow', target: "_blank"}
+          link_attributes: { rel: 'nofollow', target: "_blank" }
         )
         options = {
             autolink: true,
@@ -40,10 +40,17 @@ module ApplicationHelper
             hard_wrap: true,
             xhtml: true,
             lax_html_blocks: true,
-            strikethrough: true,
-            fenced_code_blocks: true
+            strikethrough: true
         }
         markdown = Redcarpet::Markdown.new(html_render, options)
         markdown.render(text)
+    end
+
+    def lines_navbar
+        if controller.controller_name == "lines"
+            "bg-success"
+        else
+            "bg-primary"
+        end
     end
 end
