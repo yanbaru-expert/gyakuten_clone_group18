@@ -2,10 +2,6 @@ body {
   padding-top: 60px;
 }
 
-#movie .movie-title {
-  font-size: 20px;
-}
-
 @import "bootstrap/scss/bootstrap";
 
 .alert-notice {  
@@ -16,9 +12,10 @@ body {
   @extend .alert-danger;
 }
 
-#movie .paginate-container {
-  display: flex;
-  justify-content: center;
+.newpost {
+  text-align: left;
+  margin: 0 auto;
+  width: 710px;
 }
 
 #questions a {
@@ -38,32 +35,21 @@ body {
 #questions a .info {
     padding: 10px 10px 10px 20px;
     color: #BBBBBB;
-}
-
-#questions a {
-    text-decoration: none;
-    display: block;
-    color: #333333;
-    border: solid 2px #505050;
-    border-radius: 10px;
-    transition: .4s;
+    margin:0 0 0 auto
 }
 
 #questions .question-container {
     padding: 30px 0;
 }
 
-#questions .question {
-    padding: 10px;
+.question {
+  text-align: left;
+  margin: 0 auto;
+  width: 710px;
 }
 
 .error_explanation {
   color: red;
-}
-
-.question h3 {
-  font-size: 20px;
-  padding-top: 30px;
 }
 
 .container {
@@ -72,7 +58,14 @@ body {
 }
 
 .aws_text {
-    margin: 30px 0 20px 0;
+  width: 710px;
+  margin: 0 auto;
+}
+
+#aws_content {
+  text-align: left;
+  margin: 0 auto;
+  width: 710px;
 }
 
 .pagination {
@@ -123,4 +116,9 @@ body {
 }
   .navbar-collapse {
     justify-content: center;
+}
+
+.devise {
+  width: 576px;
+  margin: 0 auto;
 }
