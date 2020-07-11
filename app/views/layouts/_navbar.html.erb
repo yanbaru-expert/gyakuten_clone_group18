@@ -10,7 +10,7 @@
         <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rails</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            Ruby/Rails教材
+            <%= link_to "Ruby/Rails教材", root_path, class: "dropdown-item" %>
             <%= link_to "動画教材", root_path, class: "dropdown-item" %>
             <%= link_to "AWS講座", aws_texts_path, class: "dropdown-item" %>
             <%= link_to "ライブコーディング", live_codings_path, class: "dropdown-item" %>
