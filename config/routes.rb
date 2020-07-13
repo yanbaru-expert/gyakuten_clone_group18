@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :books
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -15,5 +14,6 @@ Rails.application.routes.draw do
   resources :writings, only: [:index]
   resources :monetizes, only: [:index]
   resources :lines, only: [:index, :show]
+  resources :books
 
 end

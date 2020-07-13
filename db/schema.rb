@@ -50,9 +50,10 @@ ActiveRecord::Schema.define(version: 2020_07_13_132048) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
+    t.string "company"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.url "image"
+    t.string "image"
   end
 
   create_table "information", force: :cascade do |t|
