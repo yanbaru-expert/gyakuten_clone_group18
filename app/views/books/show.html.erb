@@ -6,9 +6,11 @@
 </p>
 
 <p>
+<% if @book.image? %>
   <strong>Image:</strong>
-  <%= @book.image %>
+  <%= image_tag @book.image.url %>
 </p>
+<% end %>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
