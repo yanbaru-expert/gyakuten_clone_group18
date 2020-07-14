@@ -4,7 +4,7 @@ ActiveAdmin.register Book do
   form do |f|
     f.inputs "Books" do
       f.input :title
-      f.input :image, :as => :file
+      f.input :image
     end
     f.actions
   end
