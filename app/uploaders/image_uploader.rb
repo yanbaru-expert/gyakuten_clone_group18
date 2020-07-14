@@ -1,7 +1,12 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
-  # storage :file
-  storage :fog
+  
+  if Rails.env.production?
+    storage :fog
+  else
+    storage :file
+  end
+
 
   # サムネイルを生成する設定
   version :thumb do
