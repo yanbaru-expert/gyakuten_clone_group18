@@ -1,4 +1,4 @@
 class Book < ApplicationRecord
-  # アップローダー実装
+  # カラムの名前をmount_uploaderに指定
   mount_uploader :image, ImageUploader
 end
