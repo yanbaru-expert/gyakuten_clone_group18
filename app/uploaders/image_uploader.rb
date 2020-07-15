@@ -1,6 +1,11 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
-  # storage :file
+  
+  # if Rails.env.production?
+  #   storage :fog
+  # else
+  #   storage :file
+  # end
   storage :fog
 
   # サムネイルを生成する設定
@@ -13,6 +18,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
   
+  # S3のディレクトリ名
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
@@ -20,5 +26,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   #デフォルト画像の設定
   def default_url(*args)
       ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
+  end
+
+  protected
+  # 一意となるトークンを作成
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
   end
 end
