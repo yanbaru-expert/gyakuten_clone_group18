@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :writings, only: [:index]
   resources :monetizes, only: [:index]
   resources :lines, only: [:index, :show]
+  resources :texts, only: [:index, :show]
 
 end
