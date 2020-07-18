@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <% @texts.each do |text| %>
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-dark mb-3">
+          <div class="card-header p-0">
+            
+          </div>
+            <div class="card-body bg-light">
+            <%# <p><button type="button" class="btn btn-secondary btn-block">視聴済みにする</button></p> %>
+              <h6 class="card-text"><%= text.title %></h6><br>
+              <p>【<%= text.genre %>】</p>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

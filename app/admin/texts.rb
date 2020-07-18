@@ -3,7 +3,9 @@ ActiveAdmin.register Text do
 
   form do |f|
     f.inputs "Texts" do
+      f.input :genre
       f.input :title
+      f.input :content
       f.input :image
     end
     f.actions
@@ -11,8 +13,9 @@ ActiveAdmin.register Text do
   
   show do |item_image|
     attributes_table do
+      row :genre
       row :title
-      # show画面で画像を表示するためのタグを追加
+      row :content
       row :image do
         image_tag(text.image.url) if text.image?
       end
