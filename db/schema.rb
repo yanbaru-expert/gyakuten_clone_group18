@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(version: 2020_07_15_150035) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "information", force: :cascade do |t|
     t.string "category"
     t.string "title"
@@ -101,13 +108,6 @@ ActiveRecord::Schema.define(version: 2020_07_15_150035) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "image"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "questions", force: :cascade do |t|
     t.string "title"
     t.text "detail"
@@ -134,6 +134,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_150035) do
     t.string "genre"
     t.string "title"
     t.text "content"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
