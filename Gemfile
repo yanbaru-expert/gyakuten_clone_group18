@@ -24,7 +24,7 @@ gem 'devise-bootstrap-views'
 gem 'activeadmin'
 
 gem 'kaminari'
-gem 'redcarpet', '~> 2.3.0'
+gem 'redcarpet', '~> 3.5.1'
 gem 'coderay'
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick'
